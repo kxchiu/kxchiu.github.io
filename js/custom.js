@@ -1,3 +1,21 @@
+(function(){
+    var preload = document.getElementById("preload");
+    var loading = 0;
+    var id = setInterval(frame, 64);
+
+    function frame(){
+        if(loading == 100) {
+            clearInterval(id);
+        } else {
+            loading = loading + 1;
+            if(loading == 90) {
+                preload.style.animation = "fade 1s ease";
+            }
+        }
+    }
+})();
+
+
 /*Theme    : Quick
  * Author  : Design_mylife
  * Version : V1.0
